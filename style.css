@@ -1,0 +1,237 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background-color: #f0f2f5;
+    overflow: hidden;
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 320px;
+    border-right: 1px solid #d1d7db;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e9edef;
+    background-color: #f0f2f5;
+}
+
+.sidebar-header h2 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+#search-chat {
+    width: 100%;
+    padding: 8px 10px;
+    border-radius: 20px;
+    border: 1px solid #d1d7db;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+#search-chat:focus {
+    outline: none;
+    border-color: #0078d4;
+}
+
+.chat-list-items {
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.chat-item {
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f2f5;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.chat-item:hover {
+    background-color: #f5f5f5;
+}
+
+.chat-item.active {
+    background-color: #e9edef;
+}
+
+.main-chat {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #e5ddd5;
+    min-width: 0;
+}
+
+.chat-header {
+    padding: 10px 20px;
+    background-color: #f0f2f5;
+    border-bottom: 1px solid #d1d7db;
+}
+
+#chat-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+#chat-start-date {
+    font-size: 12px;
+    color: #667781;
+}
+
+.messages-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.message-bubble {
+    max-width: 70%;
+    padding: 8px 12px;
+    border-radius: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.message-bubble .sender {
+    font-weight: bold;
+    font-size: 0.8em;
+    margin-bottom: 4px;
+    color: #54656f;
+}
+
+.message-bubble .timestamp {
+    font-size: 0.7em;
+    color: #8696a0;
+    margin-top: 5px;
+    text-align: right;
+}
+
+.message-bubble.sent {
+    background-color: #d9fdd3;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.message-bubble.received {
+    background-color: #ffffff;
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.message-bubble .content div {
+    white-space: pre-wrap;
+}
+
+.message-bubble a {
+    color: #0078d4;
+    text-decoration: underline;
+}
+.message-bubble a:hover {
+    text-decoration: none;
+}
+
+.message-bubble img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.header-user-id {
+    font-weight: normal;
+    font-size: 0.8em;
+    color: #667781;
+    margin-left: 5px;
+}
+
+.sidebar-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.sidebar-header h2 {
+    margin-bottom: 0;
+}
+
+#save-changes-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #0078d4;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+#save-changes-btn:hover {
+    background-color: #005a9e;
+}
+
+.chat-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    border-bottom: 1px solid #f0f2f5;
+    transition: background-color 0.2s;
+}
+
+.chat-item-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+}
+
+.edit-chat-icon {
+    margin-left: 10px;
+    color: #8696a0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.chat-item:hover .edit-chat-icon, .chat-item.active .edit-chat-icon {
+    visibility: visible;
+    opacity: 1;
+}
+.edit-chat-icon:hover {
+    color: #0078d4;
+}
+
+.chat-item-edit-input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #0078d4;
+    border-radius: 3px;
+    font-size: 16px;
+    outline: none;
+}
+
+.chat-item.dragging {
+    opacity: 0.5;
+    background-color: #e9edef;
+}
+
+.chat-item.drag-over {
+    border-top: 2px solid #0078d4;
+    border-bottom: 2px solid #0078d4;
+    background-color: #f0f8ff;
+}
