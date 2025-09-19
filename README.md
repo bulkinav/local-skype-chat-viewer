@@ -75,7 +75,21 @@ This is the standard backup you can download from Microsoft's "Export my data" p
 
 If you have an old Skype history exported into a text file from a tool like [SkypeLogView](https://www.nirsoft.net/utils/skype_log_view.html).
 
-1.  **Get Your Text File**: Make sure you have your chat history in a single `.txt` file.
+1.  **Get Your Text File**: Make sure you have your chat history in a single `.txt` file. The file structure should look like this:
+    ```
+    ==================================================
+    Record Number     : 1693
+    Action Type       : Chat Message
+    Action Time       : 17.08.2016 18:39:22
+    End Time          : 
+    User Name         : Pavel
+    Display Name      : Pavel Nedurov
+    Duration          : 
+    Chat Message      : Hello, are you there?
+    ChatID            : nedurov.p
+    Filename          : 
+    ==================================================
+    ```
 
 2.  **Download This Project**: Clone this repository or download the ZIP file and extract it into a new folder.
 
