@@ -2,6 +2,8 @@
 
 A simple, local, browser-based viewer for your exported Skype chat history. This tool allows you to read your Skype backups in a familiar and convenient chat interface, running entirely on your own machine. No data is ever uploaded to any server, ensuring your privacy.
 
+![local-skype-chat-viewer](https://github.com/user-attachments/assets/99260acd-c3d6-4f54-812a-e16f0234b05e)
+
 ## Key Features
 
 - **Familiar Chat Interface**: View your conversations in a classic two-panel layout.
